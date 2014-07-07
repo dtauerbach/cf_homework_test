@@ -1,0 +1,4 @@
+User ID: <%= @display_user.id %><br>
+Email: <%= @display_user.email %><br>
+Login Count: <%= @display_user.login_count %><br>
+<%= render partial: 'shared/contributions', locals: { contributions: @display_user.contributions } %>

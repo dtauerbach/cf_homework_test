@@ -1,0 +1,333 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-06 18:13:19 -0700
+
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
+  mysql2 (0.3.16) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.16) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.1.1) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.1) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (83.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (145.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-06 18:14:03 -0700
+
+ActiveRecord::NoDatabaseError (Unknown database 'igghw'Run `$ bin/rake db:create db:migrate` to create your database):
+  activerecord (4.1.1) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `rescue in mysql2_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/mysql2_adapter.rb:10:in `mysql2_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.1) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (76.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (134.0ms)
+  [1m[36m (91.8ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (75.1ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (3.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateCampaigns (20140603062054)
+  [1m[35m (20.9ms)[0m  CREATE TABLE `campaigns` (`id` int(11) auto_increment PRIMARY KEY, `title` varchar(255), `total` decimal(20,6) DEFAULT 0.0, `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (65.9ms)[0m  [1mCREATE  INDEX `index_campaigns_on_id`  ON `campaigns` (`id`) [0m
+  [1m[35m (61.7ms)[0m  CREATE  INDEX `index_campaigns_on_user_id`  ON `campaigns` (`user_id`) 
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (14.8ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140603062054')
+  [1m[36m (3.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateUsers (20140604055400)
+  [1m[35m (21.0ms)[0m  CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255), `login_count` int(11) DEFAULT 0, `admin` tinyint(1) DEFAULT 0, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (57.9ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140604055400')[0m
+  [1m[35m (3.6ms)[0m  COMMIT
+Migrating to CreateContributions (20140612210600)
+  [1m[36m (12.0ms)[0m  [1mCREATE TABLE `contributions` (`id` int(11) auto_increment PRIMARY KEY, `amount` decimal(20,6) DEFAULT 0.0, `user_id` int(11), `campaign_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (55.8ms)[0m  CREATE  INDEX `index_contributions_on_id`  ON `contributions` (`id`) 
+  [1m[36m (63.4ms)[0m  [1mCREATE  INDEX `index_contributions_on_user_id`  ON `contributions` (`user_id`) [0m
+  [1m[35m (62.3ms)[0m  CREATE  INDEX `index_contributions_on_campaign_id`  ON `contributions` (`campaign_id`) 
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140612210600')
+  [1m[36m (3.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (2.7ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-06 18:14:56 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  [1m[35mCampaign Load (0.7ms)[0m  SELECT  `campaigns`.* FROM `campaigns`  LIMIT 5
+  Rendered home/index.html.erb within layouts/application (78.6ms)
+Completed 200 OK in 2240ms (Views: 2050.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-06 18:15:00 -0700
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2014-07-06 18:15:00 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-06 18:15:00 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-06 18:15:00 -0700
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2014-07-06 18:15:00 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-06 18:15:00 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-06 18:15:00 -0700
+
+
+Started POST "/" for 127.0.0.1 at 2014-07-06 18:15:11 -0700
+Processing by HomeController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LhgA+kfbTSTSZp+SC/MgjYpdB5tApi8KvbRimsAbqak=", "email"=>"blahblah@mailinator.com", "commit"=>"Sign In"}
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'blahblah@mailinator.com' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `updated_at`) VALUES ('2014-07-07 01:15:11', 'blahblah@mailinator.com', '2014-07-07 01:15:11')[0m
+  [1m[35m (4.0ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.4ms)[0m  UPDATE `users` SET `login_count` = 1, `updated_at` = '2014-07-07 01:15:11' WHERE `users`.`id` = 1
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 228ms (ActiveRecord: 20.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-06 18:15:11 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCampaign Load (5.5ms)[0m  [1mSELECT `campaigns`.* FROM `campaigns`  WHERE `campaigns`.`user_id` = 1[0m
+  [1m[35mCampaign Load (0.4ms)[0m  SELECT  `campaigns`.* FROM `campaigns`  LIMIT 5
+  Rendered home/index.html.erb within layouts/application (161.3ms)
+Completed 200 OK in 188ms (Views: 168.7ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/campaign/new" for 127.0.0.1 at 2014-07-06 18:15:16 -0700
+Processing by CampaignController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered campaign/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 32ms (Views: 24.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/campaign" for 127.0.0.1 at 2014-07-06 18:15:20 -0700
+Processing by CampaignController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LhgA+kfbTSTSZp+SC/MgjYpdB5tApi8KvbRimsAbqak=", "title"=>"badafg", "commit"=>"Create"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.7ms)[0m  INSERT INTO `campaigns` (`created_at`, `title`, `updated_at`, `user_id`) VALUES ('2014-07-07 01:15:20', 'badafg', '2014-07-07 01:15:20', 1)
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/campaign/1
+Completed 302 Found in 49ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/campaign/1" for 127.0.0.1 at 2014-07-06 18:15:20 -0700
+Processing by CampaignController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCampaign Load (1.1ms)[0m  [1mSELECT  `campaigns`.* FROM `campaigns`  WHERE `campaigns`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (2.1ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mContribution Load (0.8ms)[0m  [1mSELECT `contributions`.* FROM `contributions`  WHERE `contributions`.`campaign_id` = 1[0m
+  Rendered shared/_contributions.html.erb (7.0ms)
+  Rendered campaign/show.html.erb within layouts/application (149.2ms)
+Completed 200 OK in 183ms (Views: 166.4ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2014-07-06 18:15:21 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-06 18:15:21 -0700
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2014-07-06 18:15:21 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-06 18:15:21 -0700
+
+
+Started POST "/campaign/1/new_contribution" for 127.0.0.1 at 2014-07-06 18:15:25 -0700
+Processing by CampaignController#new_contribution as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LhgA+kfbTSTSZp+SC/MgjYpdB5tApi8KvbRimsAbqak=", "amount"=>"400", "commit"=>"Contribute", "id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCampaign Load (0.3ms)[0m  [1mSELECT  `campaigns`.* FROM `campaigns`  WHERE `campaigns`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO `contributions` (`amount`, `campaign_id`, `created_at`, `updated_at`, `user_id`) VALUES (400.0, 1, '2014-07-07 01:15:25', '2014-07-07 01:15:25', 1)[0m
+  [1m[35m (2.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.8ms)[0m  UPDATE `campaigns` SET `total` = 400.0, `updated_at` = '2014-07-07 01:15:25' WHERE `campaigns`.`id` = 1
+  [1m[36m (4.8ms)[0m  [1mCOMMIT[0m
+  Rendered campaign/new_contribution.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 78ms (Views: 21.1ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2014-07-06 18:15:26 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-06 18:15:26 -0700
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2014-07-06 18:15:26 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-06 18:15:26 -0700
+
+
+Started GET "/campaign/1" for 127.0.0.1 at 2014-07-06 18:15:28 -0700
+Processing by CampaignController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCampaign Load (0.8ms)[0m  [1mSELECT  `campaigns`.* FROM `campaigns`  WHERE `campaigns`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mContribution Load (1.7ms)[0m  [1mSELECT `contributions`.* FROM `contributions`  WHERE `contributions`.`campaign_id` = 1[0m
+  Rendered shared/_contributions.html.erb (9.1ms)
+  Rendered campaign/show.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 51ms (Views: 37.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2014-07-06 18:15:29 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-06 18:15:29 -0700
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2014-07-06 18:15:29 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-06 18:15:29 -0700
+
+
+Started POST "/campaign/1/new_contribution" for 127.0.0.1 at 2014-07-06 18:15:38 -0700
+Processing by CampaignController#new_contribution as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LhgA+kfbTSTSZp+SC/MgjYpdB5tApi8KvbRimsAbqak=", "amount"=>"100", "commit"=>"Contribute", "id"=>"1"}
+  [1m[35mUser Load (4.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCampaign Load (0.3ms)[0m  [1mSELECT  `campaigns`.* FROM `campaigns`  WHERE `campaigns`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `contributions` (`amount`, `campaign_id`, `created_at`, `updated_at`, `user_id`) VALUES (100.0, 1, '2014-07-07 01:15:38', '2014-07-07 01:15:38', 1)[0m
+  [1m[35m (2.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE `campaigns` SET `total` = 500.0, `updated_at` = '2014-07-07 01:15:38' WHERE `campaigns`.`id` = 1
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  Rendered campaign/new_contribution.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 49ms (Views: 16.8ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2014-07-06 18:15:38 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-06 18:15:38 -0700
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2014-07-06 18:15:38 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-06 18:15:38 -0700
+
+
+Started GET "/campaign/1" for 127.0.0.1 at 2014-07-06 18:15:41 -0700
+Processing by CampaignController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCampaign Load (0.9ms)[0m  [1mSELECT  `campaigns`.* FROM `campaigns`  WHERE `campaigns`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (2.3ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mContribution Load (0.8ms)[0m  [1mSELECT `contributions`.* FROM `contributions`  WHERE `contributions`.`campaign_id` = 1[0m
+  Rendered shared/_contributions.html.erb (5.2ms)
+  Rendered campaign/show.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 42ms (Views: 29.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2014-07-06 18:15:41 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-06 18:15:41 -0700
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2014-07-06 18:15:41 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-06 18:15:41 -0700

@@ -1,0 +1,7 @@
+Edit User: <%= @display_user.email %> (<%= @display_user.id %>)
+
+<%= form_for @display_user, {method: :patch} do |f| %>
+  <%= f.label :email %> <%= f.text_field :email %><br>
+  <%= f.label :login_count %> <%= f.label :login_count, @display_user.login_count %><br>
+  <%= f.submit "Clear Logins" %><%= f.submit "Apply Changes" %>
+<% end %>

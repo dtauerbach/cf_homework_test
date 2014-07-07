@@ -1,0 +1,8 @@
+Edit Campaign: <%= @campaign.title %>
+
+<%= form_for @campaign, {method: :patch} do |f| %>
+  <%= f.label :title %> <%= f.text_field :title %><br>
+  <%= f.label :total %> <%= f.label :total, @campaign.total %><br>
+  <%= f.label :owner %> <%= text_field_tag :user_email, @campaign.user.email %><br>
+  <%= f.submit "Update Total" %><%= f.submit "Apply Changes" %>
+<% end %>

@@ -1,0 +1,15 @@
+This is the campaign:<br>
+
+Title: <%= @campaign.title %><br>
+Funding: <%= @campaign.total %><br>
+Created At: <%= @campaign.created_at %><br>
+Last Updated: <%= @campaign.updated_at %><br>
+Created By: <%= @campaign.user.email %><br>
+<hr>
+<% if @current_user %>
+  <%= form_tag(campaign_contribution_path(@campaign.id), method: :post) do |form| %>
+  <%= label_tag "$" %><%= text_field_tag :amount %>
+  <%= submit_tag "Contribute" %>
+  <% end %>
+<% end # if @current_user%>
+<%= render partial: 'shared/contributions', locals: { contributions: @campaign.contributions } %>

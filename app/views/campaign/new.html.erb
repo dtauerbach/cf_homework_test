@@ -1,0 +1,6 @@
+This is the campaign creation form:<br>
+<%= form_tag(campaign_index_path, method: :post) do |form| %>
+<%= label_tag "Title:" %>
+<%= text_field_tag :title %>
+<%= submit_tag "Create" %>
+<% end %>

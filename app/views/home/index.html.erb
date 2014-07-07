@@ -1,0 +1,30 @@
+<% if @current_user %>
+  You are signed in as: <%= @current_user.email %>
+  You have logged in: <%= @current_user.login_count %> times
+  <%= link_to "Sign Out", signout_path %>
+  <hr>
+  <%= link_to "New Campaign", new_campaign_path %><br><br>
+  <% @current_user.campaigns.each do |campaign| %>
+    <%= label_tag campaign.title %>
+    <%= link_to "Edit", edit_campaign_path(campaign.id) %>
+    <%= link_to "View", campaign_path(campaign.id) %>
+    <%= form_tag(campaign_path(campaign.id), method: :delete) do |form| %>
+      <%= submit_tag "Delete" %>
+    <% end %>
+    <br>
+  <% end %>
+<% else %>
+  <%= form_tag do |form| %>
+    <%= label_tag "Sign in with email:" %>
+    <%= text_field_tag :email %>
+    <%= submit_tag "Sign In" %>
+  <% end %>
+<% end %>
+<hr>
+Top Campaigns<br><br>
+
+<% @top_campaigns.each do |campaign| %>
+  <%= link_to "View #{campaign.title}", campaign_path(campaign.id) %>
+  Total Raised: <%= campaign.total %>
+  <br>
+<% end %>

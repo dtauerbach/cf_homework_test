@@ -37,7 +37,7 @@ gem 'spring',        group: :development
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+# Gem 'debugger', group: [:development, :test]
 gem 'mysql2'
 
 #gem 'pry'
