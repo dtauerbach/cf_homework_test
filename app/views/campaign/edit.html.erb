@@ -4,5 +4,11 @@ Edit Campaign: <%= @campaign.title %>
   <%= f.label :title %> <%= f.text_field :title %><br>
   <%= f.label :total %> <%= f.label :total, @campaign.total %><br>
   <%= f.label :owner %> <%= text_field_tag :user_email, @campaign.user.email %><br>
-  <%= f.submit "Update Total" %><%= f.submit "Apply Changes" %>
+  <%= f.submit "Update Total" %><%= f.submit "Apply Changes" %><br>
+  TODO LIST EXISTING PERKS HERE<br>
+  Perk title <%= text_field_tag :perk_title %><br>
+  Perk description <%= text_field_tag :perk_text %><br>
+  Perk Amount <%= text_field_tag :perk_amount %><br>
+  <%= f.submit "Add Perk" %>
+
 <% end %>

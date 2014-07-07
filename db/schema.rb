@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140612210600) do
+ActiveRecord::Schema.define(version: 20140707014517) do
 
   create_table "campaigns", force: true do |t|
     t.string   "title"
@@ -35,6 +35,18 @@ ActiveRecord::Schema.define(version: 20140612210600) do
   add_index "contributions", ["campaign_id"], name: "index_contributions_on_campaign_id", using: :btree
   add_index "contributions", ["id"], name: "index_contributions_on_id", using: :btree
   add_index "contributions", ["user_id"], name: "index_contributions_on_user_id", using: :btree
+
+  create_table "perks", force: true do |t|
+    t.string   "title"
+    t.text     "text"
+    t.decimal  "amount",      precision: 20, scale: 6, default: 0.0
+    t.integer  "campaign_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "perks", ["campaign_id"], name: "index_perks_on_campaign_id", using: :btree
+  add_index "perks", ["id"], name: "index_perks_on_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email"

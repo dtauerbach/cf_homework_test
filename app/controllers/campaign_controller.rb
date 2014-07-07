@@ -33,6 +33,8 @@ class CampaignController < ApplicationController
       @campaign.update_data(params[:campaign][:title], params[:user_email])
     when "Update Total"
       @campaign.update_total
+    when "Add Perk"
+      @campaign.add_perk(params[:perk_title], params[:perk_text], params[:perk_amount])
     end
     render :edit
   end

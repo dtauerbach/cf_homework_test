@@ -1,6 +1,7 @@
 class Campaign < ActiveRecord::Base
   belongs_to :user
   has_many :contributions
+  has_many :perks
 
   def add_contribution(amount, contributor)
     contribution = Contribution.create(campaign_id: self.id,
@@ -9,6 +10,15 @@ class Campaign < ActiveRecord::Base
     self.total += amount
     self.save!
     contribution
+  end
+
+  def add_perk(title, text, amount)
+    perk = Perk.create(title: title,
+                       text: text,
+                       amount: amount,
+                       campaign_id: self.id)
+    self.save!
+    perk
   end
 
   def update_data(title, email)
