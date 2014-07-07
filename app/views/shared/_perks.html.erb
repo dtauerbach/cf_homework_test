@@ -1,0 +1,20 @@
+<hr>
+Perks<br>
+<% if contributions.blank? %>
+No Perks
+<% else %>
+  <table border="1px black">
+    <tr>
+      <td>Title</td>
+      <td>Text</td>
+      <td>Amount</td>
+    </tr>
+  <% perks.each do |perk| %>
+    <tr>
+      <td><%= perk.title %></td>
+      <td><%= perk.text %></td>
+      <td><%= perk.amount %></td>
+    </tr>
+  <% end %>
+  </table>
+<% end %>

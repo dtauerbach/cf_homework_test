@@ -6,6 +6,9 @@ Created At: <%= @campaign.created_at %><br>
 Last Updated: <%= @campaign.updated_at %><br>
 Created By: <%= @campaign.user.email %><br>
 <hr>
+Perks!
+<%= render partial: 'shared/perks', locals: { perks: @campaign.perks } %>
+<hr>
 <% if @current_user %>
   <%= form_tag(campaign_contribution_path(@campaign.id), method: :post) do |form| %>
   <%= label_tag "$" %><%= text_field_tag :amount %>
